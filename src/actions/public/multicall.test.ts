@@ -744,7 +744,7 @@ test(
   async () => {
     const client = createPublicClient({
       chain: mainnet,
-      transport: http(),
+      transport: http(process.env.VITE_ANVIL_FORK_URL),
     })
 
     const contracts = []
